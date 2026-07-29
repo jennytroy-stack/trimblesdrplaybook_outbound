@@ -5,19 +5,21 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Trimble AECO Outbound SDR Playbook</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   :root{
-    --navy: #16233A;
-    --navy-2: #1F3350;
-    --paper: #F7F5EF;
-    --paper-line: #E4DFD1;
-    --orange: #E4572E;
-    --orange-dim: #C9481F;
-    --steel: #6B7789;
-    --ink: #1B2230;
-    --green: #2F7A57;
-    --red: #B5342A;
+    --navy: #00385c; /* Trimble Deep Navy */
+    --navy-2: #072a44; /* Trimble Darker Slate */
+    --primary-blue: #0063a3; /* Trimble Brand Blue */
+    --header-blue: #08416b; /* On-brand contrast header blue */
+    --paper: #f1f1f6; /* Modus Gray Light */
+    --paper-line: #cbcdd6; /* Modus Gray 1 */
+    --orange: #fbad26; /* Trimble Yellow/Orange */
+    --orange-hover: #e09712;
+    --steel: #6a6e79; /* Modus Gray 6 */
+    --ink: #171c1e; /* Modus Gray 10 */
+    --green: #1e8a44; /* Modus Green */
+    --red: #da212c; /* Modus Red */
     --white: #FFFFFF;
   }
   *{box-sizing:border-box;}
@@ -29,7 +31,7 @@
     font-size:15px;
     line-height:1.6;
   }
-  ::selection{ background: var(--orange); color:#fff; }
+  ::selection{ background: var(--primary-blue); color:#fff; }
 
   /* ---------- Blueprint grid backdrop on the shell only ---------- */
   .shell{
@@ -39,7 +41,7 @@
 
   /* ---------- Sidebar ---------- */
   .sidebar{
-    width:290px;
+    width:300px;
     flex-shrink:0;
     background:var(--navy);
     color:#D9DEE8;
@@ -66,8 +68,8 @@
     margin:0 0 6px 0;
   }
   .sb-title{
-    font-family:'Barlow Condensed',sans-serif;
-    font-size:23px;
+    font-family:'Inter',sans-serif;
+    font-size:22px;
     font-weight:700;
     line-height:1.15;
     margin:0;
@@ -85,16 +87,16 @@
     font-family:'Inter',sans-serif;
     font-size:13px;
   }
-  #searchInput::placeholder{ color:#8993A6; }
+  #searchInput::placeholder{ color:#dcedf9; }
   #searchInput:focus{ outline:2px solid var(--orange); outline-offset:1px; }
 
   nav.toc{ padding:4px 10px; }
   nav.toc a{
     display:block;
-    color:#C7CEDB;
+    color:#dcedf9;
     text-decoration:none;
-    font-size:13.5px;
-    padding:7px 10px;
+    font-size:13px;
+    padding:6.5px 10px;
     border-radius:3px;
     border-left:2px solid transparent;
     transition:background .12s ease, color .12s ease;
@@ -103,11 +105,11 @@
     font-family:'IBM Plex Mono',monospace;
     color:var(--orange);
     margin-right:8px;
-    font-size:11.5px;
+    font-size:11px;
   }
   nav.toc a:hover{ background:rgba(255,255,255,0.06); color:#fff; }
   nav.toc a.active{
-    background:rgba(228,87,46,0.14);
+    background:rgba(251,173,38,0.14);
     border-left:2px solid var(--orange);
     color:#fff;
     font-weight:500;
@@ -116,25 +118,25 @@
     display:flex;
     align-items:center;
     gap:8px;
-    color:#EDEFF3;
-    font-size:13.5px;
+    color:#fff;
+    font-size:13px;
     font-weight:600;
     padding:10px 10px 6px 10px;
-    margin-top:2px;
+    margin-top:4px;
     border-top:1px solid rgba(255,255,255,0.12);
   }
   nav.toc .nav-group-header .badge{
     font-family:'IBM Plex Mono',monospace;
     color:var(--orange);
-    font-size:11.5px;
+    font-size:11px;
   }
   nav.toc a.subnav{
     display:flex;
     align-items:center;
     gap:7px;
-    padding:5px 10px 5px 20px;
+    padding:5.5px 10px 5.5px 20px;
     font-size:12.5px;
-    color:#B7BFCE;
+    color:#dcedf9;
     border-left:2px solid transparent;
   }
   nav.toc a.subnav .letter{
@@ -147,29 +149,31 @@
     border:1px solid rgba(255,255,255,0.28);
     border-radius:3px;
     font-size:10px;
-    color:#9CA6B8;
+    color:var(--orange);
     flex-shrink:0;
   }
   nav.toc a.subnav:hover{ background:rgba(255,255,255,0.06); color:#fff; }
   nav.toc a.subnav:hover .letter{ border-color:var(--orange); color:var(--orange); }
   nav.toc a.subnav.active{
-    background:rgba(228,87,46,0.10);
+    background:rgba(251,173,38,0.14);
     border-left:2px solid var(--orange);
     color:#fff;
+    font-weight:500;
   }
   nav.toc a.subnav.active .letter{ border-color:var(--orange); color:var(--orange); }
   nav.toc a.grouped{
-    padding-left:20px;
-    font-size:13px;
+    padding-left:18px;
+    font-size:12.5px;
   }
   nav.toc a.grouped .num{
-    font-size:11px;
+    font-size:10.5px;
   }
   .sidebar-legend{
     padding:14px 20px 6px 20px;
+    font-family:'IBM Plex Mono',monospace;
     font-size:10.5px;
     line-height:1.5;
-    color:#7C879C;
+    color:#a3a6b1;
     border-top:1px solid rgba(255,255,255,0.12);
     margin-top:6px;
   }
@@ -177,7 +181,7 @@
     padding:16px 20px 4px 20px;
     font-family:'IBM Plex Mono',monospace;
     font-size:10.5px;
-    color:#7C879C;
+    color:#a3a6b1;
     border-top:1px solid rgba(255,255,255,0.12);
     margin-top:10px;
   }
@@ -187,29 +191,32 @@
     flex:1;
     min-width:0;
     padding:40px 56px 100px 56px;
-    max-width:900px;
+    max-width:920px;
   }
 
   /* Title block — nods to a construction drawing title block */
   .titleblock{
-    border:1.5px solid var(--ink);
+    border:1.5px solid var(--header-blue);
     background:var(--white);
     margin-bottom:38px;
+    border-radius:4px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.04);
   }
   .tb-top{
     display:flex;
     justify-content:space-between;
     align-items:flex-start;
     padding:20px 22px 16px 22px;
-    border-bottom:1.5px solid var(--ink);
+    border-bottom:1.5px solid var(--header-blue);
   }
   .tb-top h1{
-    font-family:'Barlow Condensed',sans-serif;
-    font-size:34px;
+    font-family:'Inter',sans-serif;
+    font-size:28px;
     font-weight:700;
     margin:0;
-    line-height:1.05;
+    line-height:1.15;
     letter-spacing:0.01em;
+    color:var(--header-blue);
   }
   .tb-top p{
     margin:6px 0 0 0;
@@ -220,12 +227,13 @@
   .tb-mark{
     font-family:'IBM Plex Mono',monospace;
     font-size:11px;
-    color:var(--orange);
-    border:1px solid var(--orange);
+    color:var(--header-blue);
+    border:1px solid var(--header-blue);
     padding:4px 9px;
     border-radius:2px;
     white-space:nowrap;
     margin-left:16px;
+    background: #f0f7fc;
   }
   .tb-grid{
     display:grid;
@@ -246,27 +254,37 @@
     scroll-margin-top:24px;
   }
   section.doc-section h2{
-    font-family:'Barlow Condensed',sans-serif;
-    font-size:26px;
+    font-family:'Inter',sans-serif;
+    font-size:23px;
     font-weight:700;
     display:flex;
     align-items:baseline;
     gap:10px;
-    border-bottom:2px solid var(--ink);
+    border-bottom:2px solid var(--header-blue);
     padding-bottom:8px;
     margin:0 0 18px 0;
+    color: var(--header-blue);
   }
   section.doc-section h2 .sec-num{
     font-family:'IBM Plex Mono',monospace;
     font-size:15px;
-    color:var(--orange);
+    color:var(--orange-hover);
     font-weight:600;
   }
   section.doc-section h3{
-    font-family:'Barlow Condensed',sans-serif;
-    font-size:19px;
+    font-family:'Inter',sans-serif;
+    font-size:17px;
     font-weight:600;
     margin:26px 0 10px 0;
+    color:var(--header-blue);
+    border-left: 3px solid var(--orange);
+    padding-left: 10px;
+  }
+  section.doc-section h4{
+    font-family:'Inter',sans-serif;
+    font-size:15px;
+    font-weight:600;
+    margin:20px 0 8px 0;
     color:var(--navy-2);
   }
   section.doc-section p{ margin:0 0 12px 0; }
@@ -278,9 +296,9 @@
     margin:12px 0 18px 0;
     padding:12px 16px;
     background:#fff;
-    border-left:3px solid var(--orange);
+    border-left:3px solid var(--header-blue);
     font-style:italic;
-    color:#3A4356;
+    color:var(--ink);
     font-size:14px;
   }
 
@@ -290,15 +308,17 @@
     margin:10px 0 20px 0;
     font-size:13.5px;
     background:#fff;
+    border-radius:4px;
+    overflow:hidden;
   }
   th, td{
     border:1px solid var(--paper-line);
-    padding:9px 11px;
+    padding:9.5px 12px;
     text-align:left;
     vertical-align:top;
   }
   th{
-    background:var(--navy);
+    background:var(--header-blue);
     color:#fff;
     font-family:'IBM Plex Mono',monospace;
     font-size:11px;
@@ -306,11 +326,11 @@
     letter-spacing:0.04em;
     font-weight:500;
   }
-  tr:nth-child(even) td{ background:#FBFAF6; }
+  tr:nth-child(even) td{ background:#fafafc; }
 
   pre.codeblock{
-    background:var(--navy);
-    color:#DCE3EE;
+    background:var(--navy-2);
+    color:#dcedf9;
     padding:16px 18px;
     border-radius:4px;
     font-family:'IBM Plex Mono',monospace;
@@ -324,16 +344,16 @@
     display:flex;
     gap:10px;
     align-items:flex-start;
-    background:#FFF3EE;
-    border:1px solid #F3C2AC;
+    background:#e8f3fb; /* Soft Modus Blue Pale */
+    border:1px solid #1072b8; /* Modus Blue Light */
     padding:12px 14px;
     border-radius:4px;
-    margin:10px 0 18px 0;
+    margin:12px 0 18px 0;
     font-size:13.5px;
   }
   .callout .dot{
     width:8px;height:8px;border-radius:50%;
-    background:var(--orange);
+    background:var(--header-blue);
     margin-top:6px;
     flex-shrink:0;
   }
@@ -341,7 +361,7 @@
   .part-divider{
     margin:56px 0 34px 0;
     padding:18px 22px;
-    background:var(--navy);
+    background:var(--header-blue);
     border-radius:4px;
     display:flex;
     align-items:baseline;
@@ -350,6 +370,7 @@
       linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
       linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
     background-size: 18px 18px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.04);
   }
   .part-divider:first-of-type{ margin-top:0; }
   .part-divider .part-roman{
@@ -358,14 +379,17 @@
     color:var(--orange);
     letter-spacing:0.06em;
     flex-shrink:0;
+    font-weight:600;
   }
   .part-divider h2.part-title{
-    font-family:'Barlow Condensed',sans-serif;
-    font-size:26px;
+    font-family:'Inter',sans-serif;
+    font-size:23px;
     font-weight:700;
     color:#fff;
     margin:0;
     letter-spacing:0.01em;
+    border-bottom:none;
+    padding-bottom:0;
   }
 
   .apx-item{
@@ -383,28 +407,30 @@
     display:flex;
     align-items:center;
     gap:12px;
-    font-family:'Barlow Condensed',sans-serif;
-    font-size:22px;
+    font-family:'Inter',sans-serif;
+    font-size:20px;
     font-weight:700;
     margin:0 0 16px 0;
-    color:var(--navy-2);
+    color:var(--header-blue);
+    border-left:none;
+    padding-left:0;
   }
   .apx-item h3.apx-title .apx-letter{
     font-family:'IBM Plex Mono',monospace;
-    font-size:15px;
+    font-size:14px;
     font-weight:600;
     color:var(--white);
-    background:var(--navy);
-    width:30px;
-    height:30px;
-    border-radius:5px;
+    background:var(--header-blue);
+    width:28px;
+    height:28px;
+    border-radius:4px;
     display:inline-flex;
     align-items:center;
     justify-content:center;
     flex-shrink:0;
   }
 
-  mark.hl{ background: #FFE1A8; padding:0 2px; border-radius:2px; }
+  mark.hl{ background: #fec157; padding:0 2px; border-radius:2px; }
 
   .no-results{
     display:none;
@@ -417,13 +443,14 @@
   /* scroll-to-top */
   #topBtn{
     position:fixed; bottom:28px; right:28px;
-    background:var(--navy); color:#fff; border:none;
+    background:var(--header-blue); color:#fff; border:none;
     width:42px;height:42px;border-radius:50%;
     font-size:18px; cursor:pointer;
     display:none; align-items:center; justify-content:center;
     box-shadow:0 3px 10px rgba(0,0,0,0.25);
+    transition: background .15s ease;
   }
-  #topBtn:hover{ background:var(--orange); }
+  #topBtn:hover{ background:var(--primary-blue); }
 
   @media (max-width: 860px){
     .sidebar{ position:relative; height:auto; width:100%; }
@@ -490,7 +517,7 @@
       <a href="#s23" class="grouped"><span class="num">23</span>Metrics</a>
       <a href="#s24" class="grouped"><span class="num">24</span>Performance Excellence</a>
 
-      <div class="nav-group-header"><span class="badge">§</span>Appendix</div>
+      <div class="nav-group-header"><span class="badge">&sect;</span>Appendix</div>
       <a href="#apxA" class="subnav"><span class="letter">A</span>Prospecting Frameworks</a>
       <a href="#apxB" class="subnav"><span class="letter">B</span>Discovery Questions</a>
       <a href="#apxC" class="subnav"><span class="letter">C</span>Objection Handling Guide</a>
@@ -1877,7 +1904,6 @@ Second: Push to Gong Flows via Salesforce
         <tr><td>1.8</td><td>2026-07-29</td><td>Grouped the 24 core chapters into seven Parts (The Outbound SDR Role, Understanding Trimble, Territory &amp; Account Planning, Prospecting Excellence, Partnering with Sellers, Productivity &amp; Execution, Measuring Success), matching the Appendix's nav pattern &mdash; Part headers in the sidebar, plus visual divider blocks in the body at each Part boundary. Chapter numbers (1&ndash;24) were kept exactly as they were so every existing "see Section N" cross-reference throughout the playbook stays valid. Renamed Section 21 from "Maximizing Your Prospecting Tools" to "Tech Stack Workflows" per updated naming. Fixed a genuine cross-reference bug in Section 20 that had pointed to Section 22 (New Logo SDR Plays) instead of Section 21 (the actual detailed workflow chapter).</td><td>SDR Enablement</td></tr>
       </table>
     </section>
-
 
   </main>
 </div>
