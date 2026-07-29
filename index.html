@@ -118,25 +118,25 @@
     display:flex;
     align-items:center;
     gap:8px;
-    color:#fff;
+    color:#EDEFF3;
     font-size:13px;
     font-weight:600;
     padding:10px 10px 6px 10px;
-    margin-top:4px;
+    margin-top:2px;
     border-top:1px solid rgba(255,255,255,0.12);
   }
   nav.toc .nav-group-header .badge{
     font-family:'IBM Plex Mono',monospace;
     color:var(--orange);
-    font-size:11px;
+    font-size:11.5px;
   }
   nav.toc a.subnav{
     display:flex;
     align-items:center;
     gap:7px;
-    padding:5.5px 10px 5.5px 20px;
+    padding:5px 10px 5px 20px;
     font-size:12.5px;
-    color:#dcedf9;
+    color:#B7C4D6;
     border-left:2px solid transparent;
   }
   nav.toc a.subnav .letter{
@@ -149,33 +149,23 @@
     border:1px solid rgba(255,255,255,0.28);
     border-radius:3px;
     font-size:10px;
-    color:var(--orange);
+    color:#9CB2C9;
     flex-shrink:0;
   }
   nav.toc a.subnav:hover{ background:rgba(255,255,255,0.06); color:#fff; }
   nav.toc a.subnav:hover .letter{ border-color:var(--orange); color:var(--orange); }
   nav.toc a.subnav.active{
-    background:rgba(251,173,38,0.14);
+    background:rgba(251,173,38,0.10);
     border-left:2px solid var(--orange);
     color:#fff;
-    font-weight:500;
   }
   nav.toc a.subnav.active .letter{ border-color:var(--orange); color:var(--orange); }
   nav.toc a.grouped{
-    padding-left:18px;
+    padding-left:20px;
     font-size:12.5px;
   }
   nav.toc a.grouped .num{
     font-size:10.5px;
-  }
-  .sidebar-legend{
-    padding:14px 20px 6px 20px;
-    font-family:'IBM Plex Mono',monospace;
-    font-size:10.5px;
-    line-height:1.5;
-    color:#a3a6b1;
-    border-top:1px solid rgba(255,255,255,0.12);
-    margin-top:6px;
   }
   .sidebar-footer{
     padding:16px 20px 4px 20px;
@@ -191,7 +181,7 @@
     flex:1;
     min-width:0;
     padding:40px 56px 100px 56px;
-    max-width:920px;
+    max-width:900px;
   }
 
   /* Title block — nods to a construction drawing title block */
@@ -280,13 +270,6 @@
     border-left: 3px solid var(--orange);
     padding-left: 10px;
   }
-  section.doc-section h4{
-    font-family:'Inter',sans-serif;
-    font-size:15px;
-    font-weight:600;
-    margin:20px 0 8px 0;
-    color:var(--navy-2);
-  }
   section.doc-section p{ margin:0 0 12px 0; }
   section.doc-section ul, section.doc-section ol{ margin:0 0 14px 0; padding-left:22px; }
   section.doc-section li{ margin-bottom:6px; }
@@ -361,7 +344,7 @@
   .part-divider{
     margin:56px 0 34px 0;
     padding:18px 22px;
-    background:var(--header-blue);
+    background:var(--navy);
     border-radius:4px;
     display:flex;
     align-items:baseline;
@@ -370,7 +353,6 @@
       linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
       linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
     background-size: 18px 18px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.04);
   }
   .part-divider:first-of-type{ margin-top:0; }
   .part-divider .part-roman{
@@ -379,17 +361,14 @@
     color:var(--orange);
     letter-spacing:0.06em;
     flex-shrink:0;
-    font-weight:600;
   }
   .part-divider h2.part-title{
     font-family:'Inter',sans-serif;
-    font-size:23px;
+    font-size:24px;
     font-weight:700;
     color:#fff;
     margin:0;
     letter-spacing:0.01em;
-    border-bottom:none;
-    padding-bottom:0;
   }
 
   .apx-item{
@@ -408,22 +387,20 @@
     align-items:center;
     gap:12px;
     font-family:'Inter',sans-serif;
-    font-size:20px;
+    font-size:21px;
     font-weight:700;
     margin:0 0 16px 0;
     color:var(--header-blue);
-    border-left:none;
-    padding-left:0;
   }
   .apx-item h3.apx-title .apx-letter{
     font-family:'IBM Plex Mono',monospace;
-    font-size:14px;
+    font-size:15px;
     font-weight:600;
     color:var(--white);
     background:var(--header-blue);
-    width:28px;
-    height:28px;
-    border-radius:4px;
+    width:30px;
+    height:30px;
+    border-radius:5px;
     display:inline-flex;
     align-items:center;
     justify-content:center;
@@ -517,7 +494,7 @@
       <a href="#s23" class="grouped"><span class="num">23</span>Metrics</a>
       <a href="#s24" class="grouped"><span class="num">24</span>Performance Excellence</a>
 
-      <div class="nav-group-header"><span class="badge">&sect;</span>Appendix</div>
+      <div class="nav-group-header"><span class="badge">§</span>Appendix</div>
       <a href="#apxA" class="subnav"><span class="letter">A</span>Prospecting Frameworks</a>
       <a href="#apxB" class="subnav"><span class="letter">B</span>Discovery Questions</a>
       <a href="#apxC" class="subnav"><span class="letter">C</span>Objection Handling Guide</a>
@@ -527,9 +504,8 @@
 
       <a href="#s26"><span class="num">26</span>Change Log</a>
     </nav>
-    <div class="sidebar-legend">Parts I&ndash;VII cover the core playbook; numbers stay consistent across chapters so in-text references (&ldquo;see Section 12&rdquo;) still line up.</div>
     <div class="sidebar-footer">
-      REV 1.8 &nbsp;|&nbsp; UPDATED 2026-07-29<br>
+      REV 2.1 &nbsp;|&nbsp; UPDATED 2026-07-29<br>
       OWNER: SDR ENABLEMENT
     </div>
   </aside>
@@ -544,7 +520,7 @@
         <div class="tb-mark">LIVING&nbsp;DOC</div>
       </div>
       <div class="tb-grid">
-        <div class="tb-cell"><span class="k">Rev</span><span class="v">1.8</span></div>
+        <div class="tb-cell"><span class="k">Rev</span><span class="v">2.1</span></div>
         <div class="tb-cell"><span class="k">Date</span><span class="v">2026-07-29</span></div>
         <div class="tb-cell"><span class="k">Owner</span><span class="v">SDR Enablement</span></div>
         <div class="tb-cell"><span class="k">Scope</span><span class="v">Outbound Motion</span></div>
@@ -818,6 +794,11 @@
       <p>Review your territory on a regular cadence, not just when something breaks &mdash; new accounts appear, markets shift, and engagement levels change. Protect real time for research and planning so your day doesn't become entirely reactive. Every interaction generates intelligence worth capturing: a customer priority, an organizational change, a technology insight. And periodically ask what's actually converting, which messages are landing, and where the patterns are &mdash; territory strategy should update based on what you're learning, not stay fixed from the plan you wrote in January.</p>
 
       <p>The difference shows up in the question you ask yourself each morning. A reactive SDR asks "who should I call next?" A territory owner asks "which conversation will create the greatest value for this customer and for Trimble?"</p>
+
+      <h3>The Golden Rule of Territory</h3>
+      <p>Unless you're specifically told otherwise, you're only allowed to reach out to accounts that are in your AE's name &mdash; this applies to any Account record that already exists in Salesforce DX.</p>
+      <p>For a company that <em>isn't</em> in DX yet, you can call it if you have good reason to believe it's actually in your territory and GAR range &mdash; don't call blind on a hope. If you get on the phone and realize partway through that the company is outside your territory, don't just drop it: do your best to still book the meeting and hand it to the appropriate AE. You'll get credit for that.</p>
+      <div class="callout"><div class="dot"></div><div>If you book an SAO on an account that already exists in DX but isn't in your AE's name, that credit can be withheld. Confirm ownership before you invest real time in an account, not after you've booked the meeting.</div></div>
     </section>
 
     <section class="doc-section" id="s8" data-title="Target Accounts Ideal Customer Profile ICP Buyer Persona Buying Signals Trigger Events Account Tiering Prioritization">
@@ -1174,6 +1155,20 @@
       <h3>Shared Accountability, In Practice</h3>
       <p>Neither "the AE owns the opportunity now" nor "the SDR just needs to create more meetings" reflects how this actually works well. The better question, asked by both sides: what can we do together to create a better outcome here? Partnerships that operate this way tend to track three things together &mdash; activity (accounts engaged, conversations created), quality (meeting quality, conversion, pipeline contribution), and collaboration itself (planning consistency, feedback exchange, strategy alignment).</p>
 
+      <h3>Rules of Engagement With AEs</h3>
+      <p>The problem this exists to avoid: SDRs sending an AE a hundred DX links asking "can I reach out to this person?" Assuming the account is already in your territory (Section 7), a simple test decides whether you need to ask first:</p>
+      <ul>
+        <li><strong>No open opportunity on the account?</strong> Call anyone. If you notice your AE reached out recently, or has a future task logged against a record on that account, it's your call whether to give them a heads-up &mdash; you don't have to ask permission.</li>
+        <li><strong>Open opportunity on the account?</strong> Ask the AE first. The COO might be mid-cycle on ProjectSight, but that doesn't mean the Controller isn't a legitimate ERP conversation &mdash; the AE just needs to be looped in before you start it.</li>
+        <li><strong>Opportunity Closed Won in the last 6 months?</strong> Ask the AE first. There are plenty of good reasons not to pitch a new product onto an account that just bought something &mdash; let the AE make that call.</li>
+      </ul>
+
+      <h3>Rules of Engagement With Other SDRs</h3>
+      <p>If an Inbound SDR is actively working Prospect A at a company, an Outbound SDR is free to work Prospect B at that same company &mdash; whoever books the meeting first gets the SAO credit. What you don't do is reach out to a prospect a colleague is already actively working; check their Gong record before you start a sequence to make sure you're not stepping on an active thread.</p>
+
+      <h3>Who Owns the Outreach</h3>
+      <p>This is a team game, but ownership does shift at a predictable point. Before the Intro Call, it's the SDR's: calendar invitations, reschedules, pre-meeting follow-up, sending the Google Meet link and agenda. After the Intro Call, if the opportunity moves to Discovery stage, the AE owns any and all follow-up outreach. If it doesn't SQO, it goes back to being a team effort &mdash; SDR and AE both work to salvage it, and the SDR shouldn't be shy about taking the reins if that's what moves it forward.</p>
+
       <h3>Where Partnerships Break Down</h3>
       <table>
         <tr><th>Problem</th><th>Fix</th></tr>
@@ -1193,7 +1188,9 @@
       <p>The question isn't whether a prospect is "good enough" &mdash; it's whether there's a real business challenge, a reason to explore change, and genuine alignment between what they need and what Trimble does. Section 13 already covers the core qualification lens (need, impact, priority, timing); add two more dimensions here that matter specifically at the handoff stage: <strong>authority</strong> (who's actually involved &mdash; stakeholders, decision-makers, influencers, users) and <strong>current environment</strong> (what technology and workflows exist today, and where they're falling short). The SDR isn't expected to complete full discovery, design a solution, or build a business case &mdash; that's the AE's job. The SDR creates the opportunity; the AE develops it.</p>
 
       <h3>What Makes an SAO Real</h3>
-      <p>A Sales Accepted Opportunity should represent more than a calendar invite or a prospect who agreed to meet &mdash; it should represent an actual relevant conversation with a potential business challenge behind it. A quality SAO captures customer context (company, industry, role), the business challenge itself, their current state, the outcome they want, and why the timing makes sense now. If any of those five are missing, the SAO probably isn't ready yet.</p>
+      <p>Mechanically, an SAO is created the moment you create the Opportunity record for a booked meeting &mdash; the record lands in the "Prospecting / Pursue" or "Qualifying / Validating" stage. But that mechanic only fires <em>after</em> the meeting clears the quality bar: an actual relevant conversation with a potential business challenge behind it, not just a calendar invite a prospect agreed to. A quality SAO captures customer context (company, industry, role), the business challenge itself, their current state, the outcome they want, and why the timing makes sense now. If any of those five are missing, don't create the Opportunity yet &mdash; the meeting isn't there.</p>
+      <p>An <strong>SQO</strong> is an SAO that's actually moving &mdash; typically defined by hard next steps already on the calendar. To get SQO credit, the Opportunity record has to advance to the "Discovery" stage or beyond; a meeting that happened but didn't produce a next step doesn't count yet, however good the conversation felt.</p>
+      <div class="callout"><div class="dot"></div><div>Crediting across motions: if a prospect an Outbound SDR was working comes in through an inbound channel within 30 days of the last outreach, the SAO credit stays with the Outbound SDR. Outside that 30-day window, credit goes to the Inbound SDR who picks it up.</div></div>
 
       <h3>What Belongs in Salesforce</h3>
       <p>At minimum: account information (company, industry, territory, ownership), contact information (name, role, persona), a conversation summary (why they engaged, what was discussed, the business challenge and any relevant initiatives), qualification notes (need, impact, stakeholders, timing, current state), and clear next steps (meeting date, AE involved, what the customer expects). The gap between a useless note and a useful one is almost entirely specificity:</p>
@@ -1205,7 +1202,24 @@
       <h3>Setting the Customer's Expectations</h3>
       <p>Tell the customer why the meeting is happening, who'll be there, and what's worth expecting from it:</p>
       <blockquote>"Based on our conversation, I think it would be valuable to connect you with [AE Name], who works with organizations like yours. They can learn more about your current processes, understand your goals, and discuss where Trimble may be able to support your team."</blockquote>
-      <p>That sets up what the customer should actually expect: a conversation that clearly builds on what's already been discussed, framed around discovery rather than a pitch, and handled professionally enough that they feel understood rather than processed.</p>
+      <p>That sets up what the customer should actually expect: a conversation that clearly builds on what's already been discussed, framed around discovery rather than a pitch, and handled professionally enough that they feel understood rather than processed. A fuller version of the same idea, said out loud on the call before you send the invite:</p>
+      <blockquote>"Tom, while I'm sending you this calendar invitation I want to make sure we're on the same page. Next Thursday, you'll meet my colleague, Phil. It'll be a standard Discovery Call where we will both learn what's going on in each other's businesses and understand if we could be a good fit for each other. If it goes well, we typically move forward with scheduling a demo for you to see any platforms you might be interested in. Is that fair?"</blockquote>
+      <p>Setting the bar this explicitly &mdash; this is a real Discovery conversation, not a quick 15-minute favor &mdash; is what increases both show rate and SQO rate. A prospect who agreed to a vague "quick call" has an easy out. One who agreed to what you just described doesn't.</p>
+
+      <h3>Booking the Meeting: Step by Step</h3>
+      <ol>
+        <li>Create and send the calendar invitation.</li>
+        <li>Add the description to the invitation (see the template below) &mdash; but wait until you're off the phone to do it, so you can get the invite itself into the prospect's inbox as fast as possible while you're still live with them.</li>
+        <li>Create the Opportunity record.</li>
+        <li>Remove every other prospect at that company from cold outreach in Gong.</li>
+      </ol>
+      <p>Create the Opportunity when the prospect actually wants to meet &mdash; waiting until there's a defined time on the calendar is typically the right call, rather than creating it the moment interest is expressed.</p>
+
+      <h3>Calendar Invitation Standards</h3>
+      <p><strong>Title:</strong> "Trimble | [Prospective Company Name]: Intro Call." <strong>Length:</strong> 30 minutes. <strong>Attendees:</strong> the appropriate AE, you, the prospect, and anyone else from their organization the prospect wants to include. Product Sellers are not scheduled onto Intro Calls by default &mdash; if you think the prospect would benefit from one, flag it to your AE and let them make that call. Always include a Google Meet link.</p>
+      <p><strong>Description template:</strong></p>
+      <blockquote>"[Prospect Name], on this call we'll discuss: [three things they were interested in on the cold call]<br><br>There will be plenty of time for you to ask us some questions and understand how we can improve your business together.<br><br>Here is my cell phone: [number]. If something pops up, let me know and we can reschedule.<br><br>See you there!"</blockquote>
+      <p>Stay on the phone until the prospect actually receives and accepts the invite &mdash; ask them to accept it while you're still talking. If the invite doesn't seem to be landing, tell them you'll stay on the line, since sometimes it just needs a moment to come through.</p>
 
       <h3>The Handoff, Phase by Phase</h3>
       <p>Before the meeting: update Salesforce, share context with the AE directly (not just through notes), and align on goals. During the meeting: introduce context if it's useful, support the transition, and keep capturing anything new that comes up. After the meeting: review the outcome together with the AE, update next steps, and agree on the follow-up strategy. None of these phases is optional if the goal is a handoff that actually holds up.</p>
@@ -1219,6 +1233,16 @@
         <tr><td>Customer expects something different than what the AE delivers</td><td>Set accurate expectations on both sides beforehand</td></tr>
       </table>
       <p>Before creating an SAO, the fast check: is it clear why this conversation matters, what business challenge is behind it, what the AE needs to know walking in, and whether the customer will feel understood rather than repeated to? A meeting was never the outcome. A meaningful conversation is &mdash; and a good handoff is what turns that into real pipeline.</p>
+
+      <h3>Tricks to Increase SAO &rarr; SQO Rates</h3>
+      <ol>
+        <li><strong>Set proper expectations on the cold call.</strong> Let the prospect know exactly what they're signing up for &mdash; this isn't a short, low-stakes chat. It's an Intro Call: they're agreeing they have a problem worth exploring.</li>
+        <li><strong>Book the Intro Call as soon as possible.</strong> Time kills deals &mdash; keep the gap between the cold call and the Intro Call as short as it can be.</li>
+        <li><strong>Send the calendar invite while you're still on the call.</strong></li>
+        <li><strong>Tell the prospect you need to stay on the line</strong> in case the invite doesn't go through right away &mdash; it gives you a reason to stay engaged until it's confirmed.</li>
+        <li><strong>Send a short, concise follow-up email</strong> with genuinely relevant information &mdash; pull a resource from Seismic, and introduce your AE by name, ideally with the AE replying to say hello.</li>
+        <li><strong>Send a reminder</strong> the day before and the morning of the Intro Call.</li>
+      </ol>
     </section>
 
     <div class="part-divider"><span class="part-roman">PART VI</span><h2 class="part-title">Productivity &amp; Execution</h2></div>
@@ -1240,15 +1264,29 @@
       <h3>Protecting Prospecting Time</h3>
       <p>Research, thoughtful messaging, and quality conversations all require focus that constant interruption destroys. Schedule prospecting blocks as recurring commitments rather than waiting for open time to appear, remove distractions during them (limit meetings, silence notifications), and walk in already knowing which accounts, which personas, and which message you're using &mdash; deciding that in the moment burns the block itself.</p>
 
-      <h3>A Sample Day</h3>
+      <h3>A Sample Day (Pacific Time)</h3>
+      <p>This is built around one goal &mdash; booking high-quality meetings &mdash; using the core tool stack (Salesforce, Gong, ZoomInfo, Sales Navigator, Prokeys). Times shift with your own territory and time zone coverage, but the shape underneath it holds up well: two protected call blocks in the morning while operations and field leaders are reachable, research and CRM work filling the gaps, and a lighter "golden hour" pass in the afternoon for reconnects.</p>
       <table>
-        <tr><th>Time</th><th>Focus</th></tr>
-        <tr><td>Start of day</td><td>Review calendar, priorities, follow-ups, and account activity &mdash; ask what today's highest-impact actions actually are</td></tr>
-        <tr><td>Morning block</td><td>Prospecting &mdash; new account outreach, strategic contacts, priority sequences</td></tr>
-        <tr><td>Midday</td><td>Customer engagement &mdash; meetings, follow-up conversations, AE alignment</td></tr>
-        <tr><td>Afternoon block</td><td>Research, personalization, sequence actions, CRM updates</td></tr>
-        <tr><td>End of day</td><td>Close out follow-ups, update Salesforce, plan tomorrow</td></tr>
+        <tr><th>Time</th><th>Block</th><th>Details &amp; Best Practices</th></tr>
+        <tr><td>7:15 &ndash; 7:30 am</td><td>Morning Setup</td><td>Log into Salesforce, review top accounts, listen to one Gong call, set three key goals for the day.</td></tr>
+        <tr><td>7:30 &ndash; 9:30 am</td><td>Call Block #1 (Prime Time)</td><td>Cold calls and follow-ups to field and operations leaders. Prioritize ZoomInfo leads; update Salesforce notes in real time.</td></tr>
+        <tr><td>9:30 &ndash; 10:00 am</td><td>CRM Follow-Ups</td><td>Complete overdue tasks in Salesforce/Gong. Send recap emails from morning connections.</td></tr>
+        <tr><td>10:00 &ndash; 11:00 am</td><td>Research &amp; Personalization</td><td>Use Sales Navigator and ZoomInfo to find 5&ndash;10 new targets. Add notes and tags for future sequencing.</td></tr>
+        <tr><td>11:00 am &ndash; 12:00 pm</td><td>Call Block #2</td><td>Target PMs and Ops Managers who start later &mdash; keep time zones in mind. A mix of cold and follow-up calls.</td></tr>
+        <tr><td>12:00 &ndash; 12:45 pm</td><td>Lunch</td><td>Away from the desk. Actually recharge.</td></tr>
+        <tr><td>12:45 &ndash; 2:15 pm</td><td>Sequence &amp; Email Block</td><td>Gong flows and one-offs. Emails to harder-to-reach targets; watch for engagement activity.</td></tr>
+        <tr><td>2:15 &ndash; 3:30 pm</td><td>Call Block #3 (Golden Hour)</td><td>Reconnect with aging prospects or pipeline reactivations &mdash; shorter, 45-minute bursts.</td></tr>
+        <tr><td>3:30 pm onward</td><td>Research &amp; Personalization</td><td>Sales Navigator and ZoomInfo again, this time for 10+ new targets. Tag and note for tomorrow's sequencing.</td></tr>
       </table>
+
+      <h3>Best Practices for the Day</h3>
+      <ul>
+        <li><strong>Prioritize quality conversations.</strong> Pull a Gong snippet into your recap emails &mdash; referencing something specific from the actual call builds more credibility than a generic follow-up.</li>
+        <li><strong>Leverage ZoomInfo early.</strong> Morning is the right window to confirm contact data before it feeds your first call block.</li>
+        <li><strong>Use Sales Navigator midday.</strong> It's the better tool for spotting new buying centers or project-related contacts once you've warmed up on calls.</li>
+        <li><strong>Protect prime time.</strong> Keep admin work and non-essential meetings out of your call blocks entirely &mdash; this is the same discipline covered above in Protecting Prospecting Time, just applied to specific hours.</li>
+        <li><strong>End strong.</strong> The last research block of the day is what tomorrow's first call block runs on &mdash; don't let it be the first thing that slips.</li>
+      </ul>
 
       <h3>Follow-Up as a Discipline, Not an Afterthought</h3>
       <p>Many opportunities only materialize after the first interaction &mdash; a non-response is usually about timing or bandwidth, not disinterest. Every follow-up should add something ("just checking in" adds nothing; a relevant insight, example, or sharper question does), stay persistent without becoming annoying, and always close with a real next step rather than trailing off.</p>
@@ -1258,6 +1296,18 @@
 
       <h3>Weekly Planning</h3>
       <p>Daily execution holds up better when it's connected to a weekly view: which accounts are moving, what's in the pipeline and how it's progressing, how activity and engagement rates are trending, and what next week's priorities should be. Section 16 covers the joint version of this done together with your AE &mdash; this is the version you run on your own first, so you show up to that conversation with an actual point of view.</p>
+
+      <h3>The Weekly Account Cadence</h3>
+      <p>Where the daily schedule above governs your hours, this governs how a single priority account gets worked over five days. It's the same multi-threading and stakeholder-mapping discipline from Section 9, laid out on a calendar.</p>
+      <table>
+        <tr><th>Day</th><th>Theme</th><th>Actions</th></tr>
+        <tr><td>Monday</td><td>Research &amp; Launch</td><td>Review the website, LinkedIn, Salesforce, and recent company news. Identify 3&ndash;5 stakeholders and build the account map (who's who). Call the primary contact and send Personalized Email #1.</td></tr>
+        <tr><td>Tuesday</td><td>Multi-Thread</td><td>Follow up with the primary contact. Call and email the secondary contact. Begin outreach to additional stakeholders identified Monday.</td></tr>
+        <tr><td>Wednesday</td><td>Provide Value</td><td>Send a value-add email &mdash; a case study, customer story, webinar, or industry insight. Call active contacts. Expand into another department if the account map suggests one.</td></tr>
+        <tr><td>Thursday</td><td>Executive Outreach</td><td>If there's been no engagement yet, reach out to an executive-level stakeholder. Continue following up with existing contacts, and ask for a referral to the right person where it fits naturally.</td></tr>
+        <tr><td>Friday</td><td>Review &amp; Next Steps</td><td>Confirm every key stakeholder has actually been worked, not just queued. Close out remaining outreach for the week. Schedule the next follow-up, or recycle the account if the week produced nothing to build on.</td></tr>
+      </table>
+      <p>This is a template, not a script &mdash; a strong Tuesday reply can pull Thursday's executive outreach earlier, and a dead week is a legitimate reason to recycle on Friday rather than force a sixth day of silence.</p>
 
       <h3>Protecting Focus Time</h3>
       <p>Prospecting is cognitively demanding &mdash; real research, real personalization, real strategic thinking, and constant context-switching quietly erodes all three. Clear your environment before a focus block (fewer open tabs, notifications off), start with a specific goal rather than a vague intention ("engage 15 priority contacts across five strategic accounts," not "prospect for a while"), and take a minute afterward to note what worked and what you'd adjust.</p>
@@ -1313,6 +1363,7 @@
 
       <h3>Gong Engage</h3>
       <p>The execution layer for structured outbound &mdash; multi-channel sequences, persona-based campaigns, task prioritization, and engagement tracking. It's a force multiplier for a good strategy and a noise machine for a bad one: avoid adding prospects without a real reason, avoid generic sequence messaging, and review what's actually working rather than treating it as fire-and-forget. Section 15 covers how to think about sequencing itself; this is the tool that runs it.</p>
+      <p>A few habits that make it work better day to day: add notes to the Person or Account record so relevant context is right in front of you the next time you call, rather than buried in memory. Use To-Dos to schedule future tasks so a prospect who isn't ready today doesn't quietly fall through the cracks. If no existing Flow fits a specific scenario, don't force it &mdash; build a sequence of To-Dos instead, effectively creating your own one-off flow for that person. And the moment you land an SAO, remove every other prospect at that company from cold Flows (Section 17 has the full booking checklist this belongs to) &mdash; if it's a good fit, send the other contacts a short email, with your new champion cc'd, inviting them to join the Intro Call.</p>
 
       <h3>Seismic</h3>
       <p>The library for approved sales collateral, product resources, and competitive information. The job isn't finding something to send &mdash; it's finding the right resource for this challenge, this role, and this stage of the conversation. More content isn't more helpful past a certain point.</p>
@@ -1493,6 +1544,28 @@ Second: Push to Gong Flows via Salesforce
       <p>It's easy to treat data filtering, list cleaning, and account mapping as administrative overhead &mdash; a chore before the "real work." Flip that: the meticulous effort spent fixing, filtering, and refining your database right now is what saves you hundreds of wasted dials and dead ends later. Clean data is the high-leverage foundation pipeline gets built on.</p>
       <p>Make it a non-negotiable habit to fill the gaps &mdash; hunt down missing names within the account hierarchy, map the buying committee to exact validated titles, and lock in direct dials and verified emails before a contact ever touches a sequence.</p>
       <div class="callout"><div class="dot"></div><div><strong>Data is a guide, not absolute truth.</strong> No platform is perfect &mdash; algorithms occasionally misclassify accounts or surface an outdated title. Don't let rigid parameters box you in. Treat the tech stack like a sandbox: experiment with filters, run keyword experiments, and adapt based on what's actually working on the phones. The elite SDRs don't just follow the data blindly &mdash; they use it as a launchpad to hunt creatively.</div></div>
+
+      <h3>The Standard Outbound Process</h3>
+      <p>Whichever report you're working from on a given day, the process underneath it stays the same:</p>
+      <ol>
+        <li><strong>Access your current document.</strong> Open the report or list you're working today, and confirm you have everything you need &mdash; the right filters, the right tools open &mdash; before you start dialing.</li>
+        <li><strong>Apply filters.</strong> Narrow the list by Representative or by State, depending on whether your strategy that day is rep-specific or territory-specific.</li>
+        <li><strong>Engage with leads.</strong> Review the filtered list and identify the ones that actually show potential, then run a simple four-touch flow: <strong>call</strong> to make a personal connection (if there's no answer, redial once &mdash; a "double tap" &mdash; before moving on), <strong>email</strong> to follow up and reinforce the message, <strong>reply</strong> to anything the lead sends back to keep the conversation alive, then <strong>call</strong> again to further the relationship and discuss next steps.</li>
+      </ol>
+
+      <h3>Outbound Lead Reports</h3>
+      <p>Four standing Salesforce reports cover most outbound lead-sourcing scenarios &mdash; each with its own temperature and reason to reach out.</p>
+      <table>
+        <tr><th>Report</th><th>Lead Temperature</th><th>Objective</th></tr>
+        <tr><td><a href="https://trimbledx.lightning.force.com/lightning/r/Report/00OPO000008zdpT2AQ/view?queryScope=userFolders" target="_blank" rel="noopener">Description Report</a></td><td>Warm</td><td>Showed interest in the past, cross-sell</td></tr>
+        <tr><td><a href="https://trimbledx.lightning.force.com/lightning/r/Report/00OPO000008zj6r2AA/view?queryScope=userFolders" target="_blank" rel="noopener">Closed Lost Report</a></td><td>Hot</td><td>Showed interest in the past, cross-sell</td></tr>
+        <tr><td><a href="https://trimbledx.lightning.force.com/lightning/r/Report/00OPO000008ziyn2AA/view?queryScope=userFolders" target="_blank" rel="noopener">Open Opps Report</a></td><td>Hot</td><td>Reengage, get the conversation restarted</td></tr>
+        <tr><td><a href="https://trimbledx.lightning.force.com/lightning/r/Report/00OPO000008zj212AA/view?queryScope=userFolders" target="_blank" rel="noopener">Closed Won Report</a></td><td>Warm</td><td>Cross-sell based on ROE, additional licenses</td></tr>
+      </table>
+      <p>The Closed Lost Report here is the same report referenced as the master shell template in the Closed-Lost Re-engagement play in Section 22 &mdash; clone it from this link rather than hunting for it separately.</p>
+
+      <h3>One More LinkedIn Habit</h3>
+      <p>Beyond the saved-search alerts covered above: whatever you find on a prospect's profile &mdash; a recent post, a shared connection, a previous employer &mdash; actually use it in your outreach. Noticing it and not mentioning it wastes the research.</p>
     </section>
 
     <section class="doc-section" id="s22" data-title="New Logo SDR Plays Closed-Lost Re-engagement Champion Tracking Executive Job Changes Competitor Contract Window Intent Data Reverse-Engineering MPL">
@@ -1562,6 +1635,31 @@ Second: Push to Gong Flows via Salesforce
 
       <h3>Five Categories</h3>
       <p>Outbound performance breaks down into <strong>activity</strong> (what's being done), <strong>engagement</strong> (are prospects responding), <strong>conversion</strong> (are activities becoming conversations and opportunities), <strong>pipeline impact</strong> (is any of this contributing to revenue), and <strong>quality</strong> (are we creating the right opportunities, not just more of them). Activity is the input; the other four determine whether it actually turns into anything.</p>
+
+      <h3>Daily Activity Goals</h3>
+      <p>These are the baseline activity numbers the daily schedule in Section 18 is built to produce &mdash; a floor to hit consistently, not a ceiling to stop at once you've reached it.</p>
+      <table>
+        <tr><th>Metric</th><th>Target</th></tr>
+        <tr><td>Dials</td><td>60</td></tr>
+        <tr><td>Conversations</td><td>6&ndash;8</td></tr>
+        <tr><td>Meetings Set</td><td>1</td></tr>
+        <tr><td>Emails Sent</td><td>30&ndash;60</td></tr>
+        <tr><td>New Accounts Prospected</td><td>5+</td></tr>
+      </table>
+      <p>If dials are on target but conversations aren't, that's a connect-rate problem (contact data, timing) rather than an effort problem &mdash; see the diagnostic table below. If conversations are healthy but meetings aren't, that's usually a discovery or relevance issue, not a volume one.</p>
+
+      <h3>Quotas &amp; Standing Expectations</h3>
+      <p>Beyond the daily numbers above, a handful of metrics get tracked on a longer horizon:</p>
+      <table>
+        <tr><th>Metric</th><th>Expectation</th></tr>
+        <tr><td>SAOs &amp; SQOs</td><td>Quota</td></tr>
+        <tr><td>Pipeline Generated</td><td>Quota</td></tr>
+        <tr><td>Activities (calls, emails, and LinkedIn touches, tracked separately) per day, week, period, and quarter</td><td>Use your individual conversion rates to back into how many dials you personally need to hit your SQO quota &mdash; the <a href="https://docs.google.com/spreadsheets/d/1v46sC2ENWRAQM60arAC-m806i7f9E_e5ZmgHR7_DYTg/edit?usp=sharing" target="_blank" rel="noopener">Dial Calculator Spreadsheet</a> does the math for you</td></tr>
+        <tr><td>Prospects currently in flow</td><td>~75&ndash;150 is standard</td></tr>
+        <tr><td>Lead Qualification Rate</td><td>10% (industry standard)</td></tr>
+        <tr><td>Engagement Rate</td><td>10% (industry standard)</td></tr>
+      </table>
+      <p>The dial and email/LinkedIn targets in the Daily Activity Goals table above are the specific per-channel floor; this is the roll-up view your manager is actually watching over a longer window.</p>
 
       <h3>Engagement Metrics</h3>
       <table>
@@ -1894,8 +1992,20 @@ Second: Push to Gong Flows via Salesforce
       <table>
         <tr><th>Version</th><th>Date</th><th>Change</th><th>Owner</th></tr>
         <tr><td>1.0</td><td>2026-07-29</td><td>Initial playbook: Welcome to the Outbound SDR Team, Understanding the Outbound Motion, and The Outbound Mindset. Consolidated overlapping content between the Welcome chapter's "Expectations" list and the full Mindset chapter, keeping the detailed version in Section 3 and a condensed preview in Section 1.</td><td>SDR Enablement</td></tr>
-      <table>  
+        <tr><td>1.1</td><td>2026-07-29</td><td>Added Part II: Understanding Trimble &amp; the AECO Business, Industry Specialization (Civil, MEP, General Contracting, Structures, ERP Cross-Sell), and Trimble Products &amp; Solutions. Consolidated three separate "lead with outcomes, not features" treatments into one canonical version in the Products chapter, and trimmed the industry overview in Section 4 down to a pointer since Section 5 covers each industry in full depth.</td><td>SDR Enablement</td></tr>
+        <tr><td>1.2</td><td>2026-07-29</td><td>Added Part III: Territory Ownership, Target Accounts &amp; ICP, Building Account Plans, and Account Research. Consolidated three near-duplicate account-prioritization frameworks into one 5-factor version, merged two overlapping "buying signals" / "trigger events" lists into one canonical table in Section 8, and merged two separate white-space-analysis treatments into a single version in Section 9. Account tiering and multi-threading tactics now live in one place each rather than being redefined per chapter.</td><td>SDR Enablement</td></tr>
+        <tr><td>1.3</td><td>2026-07-29</td><td>Added Part IV: Building an Outbound Strategy, Outbound Messaging, Discovery in Outbound, Objection Handling, and Multi-Channel Prospecting. Merged near-identical persona definitions and personalization-level frameworks (previously described almost identically in two source docs) into single canonical versions in Section 12. Distinguished "account tiering" (Section 8, which accounts to prioritize) from "contact tiering" (Section 11, which contacts within an account to prioritize), since both used similar Tier 1/2/3 language for different things. Consolidated the "why them / why now / why Trimble" test, previously restated three times, to a single definition with cross-references. Trimmed a shorter sequencing preview in Section 11 in favor of the full treatment in Section 15.</td><td>SDR Enablement</td></tr>
+        <tr><td>1.4</td><td>2026-07-29</td><td>Added Part V: SDR &amp; AE Partnership and Opportunity Qualification &amp; Handoffs. Referenced the existing account-selection framework (Section 8) rather than restating it a fourth time. Extended the qualification framework already in Section 13 with two handoff-specific dimensions (authority, current environment) instead of redefining it. Kept one weak/strong Salesforce-note example rather than duplicating the similar one already in Section 13, since this version is specifically about CRM documentation format.</td><td>SDR Enablement</td></tr>
+        <tr><td>1.5</td><td>2026-07-29</td><td>Added Part VI: Daily Operating Rhythm, AI for Outbound SDRs, Technology Stack, Maximizing Your Prospecting Tools, and New Logo SDR Plays. Trimmed the Technology Stack chapter's ZoomInfo/LinkedIn coverage (already owned by Section 10) and Salesforce note-writing example (a third near-duplicate of examples already in Sections 13 and 17) down to cross-references. At the user's request, "Maximizing Your Prospecting Tools" and "New Logo SDR Plays" (Sections 21&ndash;22) were preserved verbatim in substance &mdash; formatted for the site but not edited, condensed, or cross-referenced against other chapters.</td><td>SDR Enablement</td></tr>
+        <tr><td>1.6</td><td>2026-07-29</td><td>Added Part VII: Metrics and Performance Excellence. Merged two near-identical SDR scorecard tables into one canonical version in Section 23 (kept the "Development" category from the second draft). Cross-referenced the existing SAO definition (Section 17) rather than redefining it, and added the SQO definition that was missing. Trimmed Performance Excellence's duplicate scorecard and Gong-review overview down to cross-references into Section 23 and Section 20 respectively. Fixed a stale internal link in Section 0 that had pointed to the Change Log's original v1.0 location.</td><td>SDR Enablement</td></tr>
+        <tr><td>1.7</td><td>2026-07-29</td><td>Added an Appendix section (A&ndash;F: Prospecting Frameworks, Discovery Questions, Objection Handling Guide, Industry Playbooks, AI Prompt Library, Templates &amp; Checklists), grouped under a single nav entry with lettered sub-links rather than appearing as six separate top-level sections. Condensed each appendix into quick-reference form and cross-referenced the full chapters they parallel (Sections 5, 12, 13, 14, 17, 19) rather than repeating that content. Fixed another stale Change Log cross-reference in Section 0 introduced by the v1.6 renumbering.</td><td>SDR Enablement</td></tr>
+        <tr><td>1.8</td><td>2026-07-29</td><td>Grouped the 24 core chapters into seven Parts (The Outbound SDR Role, Understanding Trimble, Territory &amp; Account Planning, Prospecting Excellence, Partnering with Sellers, Productivity &amp; Execution, Measuring Success), matching the Appendix's nav pattern &mdash; Part headers in the sidebar, plus visual divider blocks in the body at each Part boundary. Chapter numbers (1&ndash;24) were kept exactly as they were so every existing "see Section N" cross-reference throughout the playbook stays valid. Renamed Section 21 from "Maximizing Your Prospecting Tools" to "Tech Stack Workflows" per updated naming. Fixed a genuine cross-reference bug in Section 20 that had pointed to Section 22 (New Logo SDR Plays) instead of Section 21 (the actual detailed workflow chapter).</td><td>SDR Enablement</td></tr>
+        <tr><td>1.9</td><td>2026-07-29</td><td>Added a concrete Pacific-time daily schedule and a "Best Practices for the Day" list to Section 18, replacing the previous generic sample-day table. Added a five-day Weekly Account Cadence (Monday Research &amp; Launch through Friday Review &amp; Next Steps) to Section 18. Added Daily Activity Goals (dials, conversations, meetings, emails, new accounts prospected) to Section 23 as concrete baseline targets, cross-referenced from the new schedule.</td><td>SDR Enablement</td></tr>
+        <tr><td>2.0</td><td>2026-07-29</td><td>Added "The Standard Outbound Process" (access report, apply filters by rep/state, four-touch call&ndash;email&ndash;reply&ndash;call engagement flow) and "Outbound Lead Reports" (Description, Closed Lost, Open Opps, and Closed Won reports with live Salesforce links, lead temperature, and objective) as new subsections at the end of Section 21, without altering any of that section's existing content. Cross-referenced the Closed Lost Report link to the master shell template mentioned in Section 22's Closed-Lost Re-engagement play.</td><td>SDR Enablement</td></tr>
+        <tr><td>2.1</td><td>2026-07-29</td><td>Added the Territories &amp; Rules of Engagement SOP, distributed into existing chapters after discussing overlaps with the user. Section 7: the Golden Rule (only reach out to accounts in your AE's name) and the credit-withholding risk for off-AE bookings. Section 16: Rules of Engagement with AEs (when permission is/isn't required), Rules of Engagement with other SDRs (Inbound/Outbound working different prospects at the same account, checking Gong before reaching out to a colleague's active prospect), and Who Owns the Outreach (SDR pre-Intro-Call, AE post-Discovery). Section 17: redefined SAO as triggered by Opportunity creation (Prospecting/Pursue or Qualifying/Validating stage) while keeping the existing quality bar as the condition for creating that record, added a precise SQO definition (Discovery stage or beyond), added the 30-day Inbound/Outbound crediting rule, and added the full meeting-booking process, calendar invitation standards, and six SAO&rarr;SQO conversion tricks. Section 20: enriched Gong Engage with note-taking, To-Do, and flow-cleanup habits. Section 21: appended one LinkedIn tip without altering existing content. Section 23: added quotas and standing expectations (SAOs/SQOs, pipeline, prospects in flow, qualification and engagement rates) alongside &mdash; not replacing &mdash; the existing per-channel Daily Activity Goals.</td><td>SDR Enablement</td></tr>
+      </table>
     </section>
+
 
   </main>
 </div>
