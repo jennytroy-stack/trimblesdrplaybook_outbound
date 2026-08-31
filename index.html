@@ -423,6 +423,66 @@
     justify-content:center;
     flex-shrink:0;
   }
+  .step-flow{
+counter-reset: step-counter;
+margin:16px 0 22px 0;
+}
+.step-flow .step-item{
+counter-increment: step-counter;
+position:relative;
+padding:14px 16px 14px 52px;
+background:#fff;
+border:1px solid var(--paper-line);
+border-left:3px solid var(--header-blue);
+border-radius:4px;
+margin-bottom:10px;
+}
+.step-flow .step-item::before{
+content: counter(step-counter);
+position:absolute;
+left:14px;
+top:14px;
+width:26px;
+height:26px;
+border-radius:50%;
+background:var(--header-blue);
+color:#fff;
+font-family:'IBM Plex Mono',monospace;
+font-weight:700;
+font-size:13px;
+display:flex;
+align-items:center;
+justify-content:center;
+}
+.step-flow .step-item h4{
+margin:0 0 6px 0;
+font-family:'Inter',sans-serif;
+font-size:15px;
+font-weight:700;
+color:var(--navy-2);
+}
+.step-flow .step-item p{ margin:0 0 8px 0; }
+.step-flow .step-item p:last-child{ margin-bottom:0; }
+.owner-tag{
+display:inline-block;
+font-family:'IBM Plex Mono',monospace;
+font-size:10.5px;
+text-transform:uppercase;
+letter-spacing:0.04em;
+padding:2px 8px;
+border-radius:10px;
+background:#fdf1da;
+color:var(--orange-hover);
+font-weight:700;
+margin-left:8px;
+}
+.owner-tag.ops{ background:#e8f3fb; color:var(--header-blue); }
+.link-slot{
+color: var(--header-blue);
+text-decoration: underline;
+font-weight: 600;
+padding: 0 1px;
+}
 
   mark.hl{ background: #fec157; padding:0 2px; border-radius:2px; }
 
@@ -672,7 +732,7 @@ table{ display:block; overflow-x:auto; white-space:nowrap; }
       <h3>Today's Buyer Has Already Done Homework</h3>
       <p>Before an SDR ever reaches them, most prospects have already researched potential solutions, compared vendors, read reviews, and talked to peers. That means you earn attention by adding something they don't already have &mdash; not by introducing yourself. Conversations land when they're relevant, personalized, timely, tied to business outcomes, and respectful of the person's time. Approach every interaction as helping, not selling.</p>
 
-      <h3>Enterprise Buying Is a Team Sport</h3>
+      <h3>Buying Decisions Are Group Decisions</h3>
       <p>Trimble's Outbound SDRs support both Mid-Market and Enterprise New Logo AEs, where deals routinely involve executive sponsors, business leaders, operational users, technical evaluators, procurement, and finance. Don't assume one good conversation equals one decision. Work with your AE to map the broader buying committee and look for chances to engage more than one stakeholder over time.</p>
 
       <h3>Multi-Threading</h3>
@@ -784,7 +844,7 @@ table{ display:block; overflow-x:auto; white-space:nowrap; }
       <h3>What Is AECO?</h3>
       <p>
       AECO stands for Architecture, Engineering, Construction, and Owner
-      &amp; Operator. These industries are responsible for creating
+      &amp; Public Sector. These industries are responsible for creating
       and
       maintaining the built environment — commercial buildings,
       residential developments, hospitals, schools, airports, roads and
@@ -825,7 +885,7 @@ table{ display:block; overflow-x:auto; white-space:nowrap; }
       </ul>
       <h3>The Problem: A Fragmented Industry</h3>
       <p>
-      Construction is a team sport played by a large, shifting cast — owners, architects, engineers, general contractors, specialty subcontractors, field crews, and operations teams, often spread across dozens of vendors and subcontracts on a single project. Historically, those teams have relied on manual processes and disconnected systems, creating silos where information gets lost, data becomes trapped in spreadsheets, and communication breaks down between departments, project phases, and the office and field. The result is familiar across the industry: delays compound, mistakes get repeated, budgets get harder to control, and contractor margins are put under pressure.
+        Construction is a collaborative environment at any scale. From small regional shops to major enterprise accounts, projects depend on aligning a moving mix of roles — owners, engineers, trade partners, and field teams — across every phase of the job. Historically, those teams have relied on manual processes and disconnected systems, creating silos where information gets lost, data becomes trapped in spreadsheets, and communication breaks down between departments, project phases, and the office and field. The result is familiar across the industry: delays compound, mistakes get repeated, budgets get harder to control, and contractor margins are put under pressure.
       </p>
       <img alt="Diagram of a construction Project Team hub with
       twelve
@@ -955,14 +1015,10 @@ table{ display:block; overflow-x:auto; white-space:nowrap; }
       expensive mistakes built on stale information.
       </p>
       <p>
-      On paper, a project looks like a clean, linear assembly line
-      — design it, estimate it, build it, operate it. In practice
-      it behaves more like a wheel than a line: data doesn't sit
-      quietly inside one phase, it gets handed off dynamically. When an
+        On paper, a project looks like a clean, linear assembly line — design it, estimate it, build it, operate it. In practice it behaves more like a wheel than a line. <strong> Data flows continuously across the project rather than moving step-by-step. It doesn't remain trapped in one phase — it gets passed back and forth between teams throughout the job.</strong> When an
       architect changes a 3D model, that change alters material costs,
       which changes what the crew measures on site, which eventually
-      changes the final asset record an owner operates against. The
-      five pillars below are how TC1 actually organizes that wheel into
+      changes the final asset record an owner operates against. The pillars below are how TC1 actually organizes that wheel into
       a product ecosystem — and the lifecycle table after it shows
       how they map across a project's life.
       </p>
@@ -1098,7 +1154,7 @@ table{ display:block; overflow-x:auto; white-space:nowrap; }
       </tr>
       </table>
             <h3>Why Customers Buy Trimble</h3>
-            <p>Customers rarely begin by saying "I need new software." Instead, they describe business problems — "Our estimating takes too long," "Our teams don't communicate well," "We're constantly behind schedule," "Our field crews are using outdated information," "We have too much manual work," "We struggle to track project costs," "Our models don't stay coordinated." These business problems create opportunities for meaningful discovery. As an SDR, your role is to understand the underlying challenge — not immediately recommend a product.</p>
+            <p>Customers rarely begin by saying "I need new software."<p>Instead, they describe business problems — <ul><li>"Our estimating takes too long"<li>"Our teams don't communicate well"<li>"We're constantly behind schedule"<li>"Our field crews are using outdated information"<li>"We have too much manual work"<li>"We struggle to track project costs"<li>"Our models don't stay coordinated"</ul><p>These business problems create opportunities for meaningful discovery. As an SDR, your role is to understand the underlying challenge — not immediately recommend a product.</p>
             <p>Every customer is different, but the outcomes they're chasing tend to cluster into a handful of themes:</p>
             <table>
               <tr><th>Outcome</th><th>What It Looks Like</th></tr>
@@ -1176,7 +1232,7 @@ table{ display:block; overflow-x:auto; white-space:nowrap; }
       better
       decision-making, improved field efficiency, more accurate
       estimating, and higher-quality deliverables. Whenever possible,
-      connect discovery conversations back to business outcomes rather
+      connect qualification conversations back to business outcomes rather
       than product features.
       </p>
 
@@ -1199,10 +1255,7 @@ This section goes a layer
     </p>
     <h3>Industry Segments We Serve</h3>
     <p>
-    Every account you touch falls into one of nine working segments.
-    Trimble groups them into three broader buckets for routing and
-    positioning purposes — worth knowing since prospects rarely
-    describe themselves using our internal category names.
+      Every account you touch falls into one of nine working segments. For the New Logo team, Trimble groups them into three broader buckets for routing and positioning purposes - GC/Structures/Other, Heavy Civil & Infrastructure (HCI) and MEP.  It’s worth knowing since prospects rarely describe themselves using our internal category names.
     </p>
     <table>
     <tr><th>Segment</th><th>What They
@@ -1731,7 +1784,7 @@ This section goes a layer
       <p>Because this is an existing customer relationship, coordinate with the account owner and relevant internal teams before outreach. Understand what the customer already owns, what conversations are already underway, and where there may be an appropriate expansion opportunity. The mindset is not "What else can we sell them?" It is "Where could we create more value for a customer we already serve?"</p>
 
       <h3>Building Your Industry Knowledge</h3>
-      <p>Specialization isn't a one-time onboarding task &mdash; it builds through customer conversations, AE feedback, Gong call reviews, and just paying attention to what comes up repeatedly. Every conversation is a chance to learn something that makes the next one better. For formal learning and verification, take advantage of the product and industry certification courses available in <a href="https://learn.trimble.com/pages/869/Industry-&-Product-Certification">Trimble Learn</a>. As deeper industry-specific playbooks get built out (target profiles, messaging by persona, objection handling, customer stories), they'll extend this chapter rather than replace it.</p>
+      <p>Specialization isn't a one-time onboarding task &mdash; it builds through customer conversations, AE feedback, Gong call reviews, and just paying attention to what comes up repeatedly. Every conversation is a chance to learn something that makes the next one better. For formal learning and verification, take advantage of the product and industry certification courses available in <a href="https://learn.trimble.com/pages/869/Industry-&-Product-Certification">Trimble Learn</a>. The industry-specific playbooks built (target profiles, messaging by persona, objection handling, customer stories) extend this chapter rather than replace it.  Your can find those in the Appendix under Key Links & Resources!</p>
     </section>
 
     <section class="doc-section" id="s8" data-title="Trimble Products Solutions Connected Consultant Catalog Solution Families Positioning Outcomes Not Features">
@@ -1742,16 +1795,15 @@ This section goes a layer
       <p><a href="https://confluence.trimble.tools/spaces/ASSE/pages/1216022204/Industry+Landscape">The Connected Consultant Solutions Catalog</a> is the reference for solution areas, product families, capabilities, and the customer outcomes each one supports &mdash; use it when prepping for account conversations rather than trying to hold the full portfolio in your head. (Confirm the current catalog link with enablement if you don't have it yet.)</p>
 
       <h3>Solution Families</h3>
-      <p>Six broad families cover most of the portfolio. Each maps to a recognizable set of customer problems &mdash; use these as conversation starters, not a script.</p>
-      <table>
-        <tr><th>Family</th><th>Customer Problems</th><th>Sample Conversation Starter</th></tr>
-        <tr><td>Construction Management &amp; Collaboration</td><td>Disconnected teams, limited project visibility, manual processes</td><td>"How are your teams sharing project information between office and field today?"</td></tr>
-        <tr><td>Design &amp; Engineering</td><td>Design coordination, accuracy, connecting design decisions to construction outcomes</td><td>"What challenges come up when a project moves from design into construction?"</td></tr>
-        <tr><td>Field &amp; Construction Execution</td><td>Limited real-time info in the field, workflow inefficiency, communication gaps</td><td>"What processes create the most friction for your field teams?"</td></tr>
-        <tr><td>Survey, Geospatial &amp; Data</td><td>Capturing accurate field data, connecting physical environments to digital information</td><td>"How important is real-time visibility into field conditions for your operations?"</td></tr>
-        <tr><td>Equipment &amp; Productivity</td><td>Equipment utilization, downtime, operational cost</td><td>"How are you currently measuring equipment productivity?"</td></tr>
-        <tr><td>Business Management &amp; ERP</td><td>Disconnected financial and operational systems, limited company-wide visibility</td><td>"How connected are your operational and financial systems today?"</td></tr>
-      </table>
+<p>Five broad families cover most of the portfolio. Each maps to a recognizable set of customer problems &mdash; use these as conversation starters.</p>
+<table>
+<tr><th>Solution Family (Pillar)</th><th>Customer Problems</th><th>Sample Conversation Starter</th></tr>
+<tr><td>1. Design, Detailing &amp; Modeling</td><td>Constructability errors, disconnected 3D models, rework between detailers and field teams</td><td>"How are your VDC teams ensuring models are truly constructible before handing them off to the field?"</td></tr>
+<tr><td>2. Estimating &amp; Takeoff</td><td>Slow takeoff processes, bid inaccuracy, disconnected estimating and cost-tracking data</td><td>"How are your estimators managing bid volume and connecting takeoff data directly into your cost estimates?"</td></tr>
+<tr><td>3. Project Management &amp; Collaboration</td><td>Field-to-office communication gaps, delayed RFIs and submittals, limited real-time project visibility</td><td>"Where are the biggest bottlenecks when getting drawing updates or RFIs between your office and field teams?"</td></tr>
+<tr><td>4. Scanning, Layout &amp; Field Management</td><td>Layout errors, rework from manual measurements, disconnected machine control or layout data</td><td>"How are your field crews handling site layout and field verification to catch errors before they cause rework?"</td></tr>
+<tr><td>5. Financial, Payment &amp; HR (ERP)</td><td>Disconnected financial and operational data, delayed job cost reporting, manual payroll and billing cycles</td><td>"How smoothly is field data flowing into your ERP to give leadership real-time visibility into job costs?"</td></tr>
+</table>
 
       <h3>Solution Positioning: Start With the Problem</h3>
       <p>This is the one habit worth building above all others. Skip "Trimble has a solution that does X." Instead: "Many organizations like yours are looking for ways to improve X &mdash; I'm curious how your team approaches that today." The conversation should always open on the customer's situation, not Trimble's catalog.</p>
@@ -4950,22 +5002,22 @@ handoff is a partnership, not the end of your involvement.
 
       <div class="apx-item" id="apxC">
         <h3 class="apx-title"><span class="apx-letter">C</span>Key Links &amp; Sources of Truth</h3>
-        <p>The named systems and documents referenced throughout this playbook that SDRs pull from directly. Add the actual links as they're available &mdash; this is the index of what to bookmark, not a live directory.</p>
+        <p>The named systems and documents referenced throughout this playbook that SDRs pull from directly. Add the actual links as they're available &mdash; this is the index of what to bookmark.</p>
         <table>
           <tr><th>Resource</th><th>Used For</th><th>Link</th></tr>
-          <tr><td>SDR Process: Lead to Account/Contact/Opp</td><td>Step-by-step lead conversion &amp; opportunity creation (Section 21)</td><td><a class="link-slot" href="#" title="Paste the SDR Process: Lead to Account/Contact/Opp link here">Link</a></td></tr>
-          <tr><td>Amendments in Salesforce DX guide</td><td>Creating an Amendment Opportunity for an existing customer</td><td><a class="link-slot" href="#" title="Paste the Amendments in Salesforce DX guide link here">Link</a></td></tr>
-          <tr><td>Sales Staff Sheet</td><td>Territory codes and AE names (Section 21)</td><td><a class="link-slot" href="#" title="Paste the Sales Staff Sheet link here">Link</a></td></tr>
-          <tr><td>2026 NAICS Codes to Vertical &ndash; Americas</td><td>Salesforce/AECO Sales Ops mapping of our industry segments</td><td><a class="link-slot" href="#" title="Paste the 2026 NAICS Codes to Vertical - Americas link here">Link</a></td></tr>
-          <tr><td>SDR Arena</td><td>All SDR Team Metrics Tracking</td><td><a class="link-slot" href="#" title="Paste the SDR Arena link here">Link</a></td></tr>
-          <tr><td>SDR &amp; AE Partnership Playbook</td><td>Defines SLA rules, handoff protocols, discovery criteria, and joint workflow expectations between SDRs and Account Executives.</td><td><a class="link-slot" href="#" title="Paste the SDR & AE Partnership Playbook link here">Link</a></td></tr>
-          <tr><td>Trimble Industry Glossaries</td><td>Standardizes industry terminology, acronyms, and sector-specific concepts across General Contracting, MEP, Civil, Structures, and Architecture.</td><td><a class="link-slot" href="#" title="Paste the Trimble Industry Glossaries link here">Link</a></td></tr>
-          <tr><td>Trimble AECO Product and Capability Quick Reference</td><td>Outlines core software capabilities, key use cases, and solution mapping for the complete AECO product portfolio &ndash; use this Notebook to prompt industry-related answers.</td><td><a class="link-slot" href="#" title="Paste the Trimble AECO Product and Capability Quick Reference link here">Link</a></td></tr>
-          <tr><td>New Logo SDR Gong Flows Collection</td><td>Contains primary Outbound SDR Gong Engage Flows and their purpose.</td><td><a class="link-slot" href="#" title="Paste the New Logo SDR Gong Flows Collection link here">Link</a></td></tr>
-          <tr><td>Connected Consultant Solutions Catalog</td><td>Overview of AECO Industry Landscape solutions and persona messaging guide.</td><td><a class="link-slot" href="https://confluence.trimble.tools/spaces/ASSE/pages/1216022204/Industry+Landscape" target="_blank" title="View the Industry Landscape">Link</a></td></tr>
-          <tr><td>SDR & AE Partnership Planning </td><td>Template and framework for setting up SDR & AE partnership strategy.</td><td><a class="link-slot" href="#" title="Paste the SDR & AE PARTNERSHIP PLANNING [MASTER] link here">Link</a></td></tr>
-          <tr><td>SDR Continuity Handoff</td><td>Handoff documentation standards to ensure continuity when SDRs move roles.</td><td><a class="link-slot" href="#" title="Paste the SDR CONTINUITY HANDOFF [Doc] link here">Link</a></td></tr>
-          <tr><td>SDR & AE Team Expectations</td><td>Agreement on SDR & AE partnership goals and communication norms.</td><td><a class="link-slot" href="#" title="Paste the SDR & AE Team Expectations [Doc] link here">Link</a></td></tr>
+          <tr><td>SDR Process: Lead to Account/Contact/Opp</td><td>Step-by-step lead conversion &amp; opportunity creation (Section 21)</td><td><a class="link-slot" href="https://docs.google.com/presentation/d/1Q2cI4XsRIH8IoojI8TAH1bdQcEZlF_NTRHbiXBiMp5M/edit?slide=id.g3f14d5454e9_0_27008#slide=id.g3f14d5454e9_0_27008" title="Paste the SDR Process: Lead to Account/Contact/Opp link here">Link</a></td></tr>
+          <tr><td>Amendments in Salesforce DX guide</td><td>Creating an Amendment Opportunity for an existing customer</td><td><a class="link-slot" href="https://docs.google.com/presentation/d/1Q2cI4XsRIH8IoojI8TAH1bdQcEZlF_NTRHbiXBiMp5M/edit?slide=id.g3f14d5454e9_0_76667#slide=id.g3f14d5454e9_0_76667" title="Paste the Amendments in Salesforce DX guide link here">Link</a></td></tr>
+          <tr><td>Sales Staff Sheet</td><td>Territory codes and AE names (Section 21)</td><td><a class="link-slot" href="https://docs.google.com/spreadsheets/d/1clgkbeWtbagRtTNu3OawAaNXNB0UWDBEZ9Iu9iJZKq8/edit?gid=63266549#gid=63266549" title="Paste the Sales Staff Sheet link here">Link</a></td></tr>
+          <tr><td>2026 NAICS Codes to Vertical &ndash; Americas</td><td>Salesforce/AECO Sales Ops mapping of our industry segments</td><td><a class="link-slot" href="https://docs.google.com/spreadsheets/d/170_yDd90UEXdSFmnMfqTCkb2Ko5uwj6AWGtyELwkjvE/edit?gid=0#gid=0" title="Paste the 2026 NAICS Codes to Vertical - Americas link here">Link</a></td></tr>
+          <tr><td>SDR Arena</td><td>All SDR Team Metrics Tracking</td><td><a class="link-slot" href="https://sdr-arena.lovable.app/" title="Paste the SDR Arena link here">Link</a></td></tr>
+          <tr><td>SDR &amp; AE Partnership Playbook</td><td>Defines SLA rules, handoff protocols, discovery criteria, and joint workflow expectations between SDRs and Account Executives.</td><td><a class="link-slot" href="https://docs.google.com/document/d/1SIYt4PQq3mwNaUyuy7zjTe3QtWs2Yvqtj1QaU_9Knjg/edit?tab=t.31dx6f7i5o2t#heading=h.6hzh1v77onzr" title="Paste the SDR & AE Partnership Playbook link here">Link</a></td></tr>
+          <tr><td>Trimble Industry Glossaries</td><td>Standardizes industry terminology, acronyms, and sector-specific concepts across General Contracting, MEP, Civil, Structures, and Architecture.</td><td><a class="link-slot" href="https://docs.google.com/spreadsheets/d/1zFwrN7W3svTloUQssz6tpOteqe-4rHjLonkkx0kousI/edit?gid=189183159#gid=189183159" title="Paste the Trimble Industry Glossaries link here">Link</a></td></tr>
+          <tr><td>Trimble AECO Product and Capability Quick Reference</td><td>Outlines core software capabilities, key use cases, and solution mapping for the complete AECO product portfolio &ndash; use this Notebook to prompt industry-related answers.</td><td><a class="link-slot" href="https://notebook.google.com/notebook/7ad796f3-8609-41dd-827d-8e3e90c7851a" title="Paste the Trimble AECO Product and Capability Quick Reference link here">Link</a></td></tr>
+          <tr><td>New Logo SDR Gong Flows Collection</td><td>Contains primary Outbound SDR Gong Engage Flows and their purpose.</td><td><a class="link-slot" href="https://docs.google.com/spreadsheets/d/1qEl626HIcZWOLwFMq0wInMmtodJUqBXp5Xn9EAdQZH4/edit?gid=2144957005#gid=2144957005" title="Paste the New Logo SDR Gong Flows Collection link here">Link</a></td></tr>
+          <tr><td>Connected Consultant Solutions Catalog</td><td>Overview of AECO Industry Landscape solutions and persona messaging guide (<strong>access code: trimble-aeco</strong>).</td><td><a class="link-slot" href="https://confluence.trimble.tools/spaces/ASSE/pages/1216022204/Industry+Landscape" target="_blank" title="View the Industry Landscape">Link</a></td></tr>
+          <tr><td>SDR & AE Partnership Planning </td><td>Template and framework for setting up SDR & AE partnership strategy.</td><td><a class="link-slot" href="https://docs.google.com/spreadsheets/d/1RbualGw9N2K80p3KrPIqriKEZVr-gXt7DANS9qh8-Sc/copy" title="Paste the SDR & AE PARTNERSHIP PLANNING [MASTER] link here">Link</a></td></tr>
+          <tr><td>SDR Continuity Handoff</td><td>Handoff documentation standards to ensure continuity when SDRs move roles.</td><td><a class="link-slot" href="https://docs.google.com/document/d/1qkcg1HnMTE5WHmo4z-g0na63erldYSHFArD7cwzjLEc/copy" title="Paste the SDR CONTINUITY HANDOFF [Doc] link here">Link</a></td></tr>
+          <tr><td>SDR & AE Team Expectations</td><td>Agreement on SDR & AE partnership goals and communication norms.</td><td><a class="link-slot" href="https://docs.google.com/document/d/1mEH2KRmrCh-Dw3YS_gqjHPxOeK4dgZ8I8_TYEhm16NY/copy" title="Paste the SDR & AE Team Expectations [Doc] link here">Link</a></td></tr>
         </table>
       </div>
 
