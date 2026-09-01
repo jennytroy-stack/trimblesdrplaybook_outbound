@@ -1310,7 +1310,36 @@ This section goes a layer
     food/beverage facilities. Also known as process
     piping.</td></tr>
     </table>
+    <h3>Account Segmentation by Gross Annual Revenue</h3>
 
+    <p>Trimble uses <strong>Gross Annual Revenue (GAR)</strong> to help segment customer accounts by company size. Segment affects account coverage, sales ownership, and how the broader account team may engage the customer.</p>
+    
+    <table>
+    <tr>
+    <th>Segment</th>
+    <th>Gross Annual Revenue (GAR)</th>
+    </tr>
+    
+    <tr>
+    <td>SMB</td>
+    <td>Under $10M</td>
+    </tr>
+    
+    <tr>
+    <td>Mid-Market</td>
+    <td>$10M&ndash;$39.9M</td>
+    </tr>
+    
+    <tr>
+    <td>Enterprise</td>
+    <td>$40M+</td>
+    </tr>
+    </table>
+    
+    <div class="callout">
+      <div><strong>Keep in mind:</strong> GAR determines the account's assigned business segment, but it does not determine how strongly a lead or account should be prioritized. Use customer fit, relevant signals, timing, and business context to determine where to focus your effort.</div>
+    </div>
+    
     <h3>Personas &amp; Methodology</h3>
     <p>
     The personas below are fictional, generalized representations of
@@ -2891,6 +2920,64 @@ This section goes a layer
         <tr><td>Giving up after one or two attempts</td><td>Most real opportunities need multiple touches to surface</td></tr>
       </table>
       <p>Worth tracking over time: activity (calls, emails, LinkedIn touches, videos sent), engagement (opens, replies, conversations, meetings created), and quality (target-account engagement, persona engagement, actual opportunity creation). A phone call, an email, and a LinkedIn comment each look small in isolation &mdash; together, sustained over time, they're what turns cold outreach into an actual relationship.</p>
+      <h3>Calling Standard Operating Procedure: Gong Engage</h3>
+<p>Calls are one of the most important sources of customer context in the SDR motion. Using Gong-integrated calling workflows helps ensure conversations are connected to the correct Salesforce record, important customer context is captured, handoffs are easier for AEs to continue, and managers can coach from what actually happened rather than relying only on notes or recollection.</p>
+<p>The operating principle is pretty straight-forward: <strong>place calls through approved Trimble workflows whenever possible, record when legally permitted and operationally supported, and follow the applicable regional consent process.</strong></p>
+<h4>Approved Calling Workflows</h4>
+<p>SDRs should use one of the following Gong-connected workflows for normal prospecting and follow-up activity.</p>
+<table>
+<tr><th>Workflow</th><th>How It Works</th><th>Best For</th></tr>
+<tr><td><strong>Gong To-Dos / Gong Dialer</strong></td><td>Open Gong, navigate to your assigned To-Dos, select the call task, and launch the call through the Gong dialing workflow.</td><td>High-volume call blocks, sequenced outreach, prioritized daily activity, and follow-up tasks</td></tr>
+</table>
+<img src="images/gong-todos-calls-list.png" alt="Gong Engage To-dos list showing manual emails and calls filtered, with a call task highlighted" class="step-shot">
+<img src="images/gong-dialer-call-popup.png" alt="Gong dialer call popup for calling a contact, showing calling-from number and call controls" class="step-shot">
+<table>
+<tr><td><strong>Salesforce + Gong Extension</strong></td><td>Open the appropriate lead, contact, or account record in Salesforce and launch the call through the Gong extension.</td><td>CRM-driven prospecting, account-based outreach, Salesforce task execution, and calls where account context should remain visible</td></tr>
+</table>
+<img src="images/salesforce-lead-open-gong-dialer.png" alt="Salesforce lead record with an Open Gong dialer option next to the phone number" class="step-shot">
+<img src="images/salesforce-related-contacts-gong-dialer.png" alt="Salesforce account Related Contacts list with Open Gong dialer shown on a contact's phone number" class="step-shot">
+<p>Using these workflows improves activity tracking, reduces manual documentation, and helps connect calls to the correct lead, contact, account, or opportunity whenever possible.</p>
+<h4>Calls Outside the Approved Workflow</h4>
+<p>Avoid placing routine prospecting calls from a personal phone or outside the Gong-integrated workflow when an approved option is available. Calls made outside connected workflows may not be automatically recorded or logged, may not attach to the correct Salesforce record, and require the SDR to manually capture and transfer customer context.</p>
+<p>That creates additional work and increases the risk that buying signals, objections, discovery context, commitments, or next steps are lost before the next customer interaction or AE handoff.</p>
+<h4>Call Recording Standard</h4>
+<p>Calls should be recorded <strong>when legally permissible, operationally supported, and consistent with Trimble's approved regional process.</strong> Recording behavior may differ by country, state, jurisdiction, or dialing configuration. Gong may automatically record, require the rep to enable recording manually, or prevent recording for certain locations.</p>
+<div class="callout"><div><strong>Your responsibility is not to interpret privacy law.</strong> Follow Trimble's approved regional process, use the required notice or consent language, and respect the customer's choice. Legal and Privacy teams establish the applicable requirements.</div></div>
+<p>Before calling, understand how Gong is configured for the region you are contacting and whether recording:</p>
+<ul><li>Starts automatically</li><li>Requires manual activation</li><li>Requires notice or consent before activation</li><li>Is unavailable for that location</li></ul>
+<p>If you are unsure which process applies, check the current regional calling guidance or ask your manager before beginning the call block.</p>
+<h4>Calling in North America</h4>
+<p>Recording requirements can vary by state and calling location. Follow the recording configuration and consent requirements established for the number or area you are contacting. Do not assume that because recording is available in Gong it is automatically appropriate to use without the required notice or consent.</p>
+<p>When permission is required before enabling recording, keep the ask natural and focused on the benefit to the conversation:</p>
+<blockquote>"I'd like to turn on my notetaker so I can stay focused on the conversation and make sure I capture everything accurately. Is that okay with you?"</blockquote>
+<p>Other approved variations may include:</p>
+<ul><li>"I want to make sure I don't miss any details while we talk. Do you mind if I turn on my notetaker?"</li><li>"Just so I can document what we discuss and prepare the right people internally, would it be alright if I turn on my notetaker?"</li><li>"If you're okay with it, I'd like to turn on my notetaker so I can focus on our conversation instead of taking notes."</li></ul>
+<h4>Calling in UK / EMEA</h4>
+<p>For UK and EMEA calls, use the approved notice or consent language established for your team before recording. The goal is to make the process clear, brief, and repeatable rather than asking SDRs to interpret GDPR or other regional privacy requirements themselves.</p>
+<p><strong>Recommended default:</strong></p>
+<blockquote>"Before we get started, I'd like to record this call for better note-taking and to make sure I follow up accurately. If you'd rather we don't record, just let me know and I'll switch it off."</blockquote>
+<p>Where explicit consent is required by the approved process:</p>
+<blockquote>"Quick heads-up: this call can be recorded for note-taking and training purposes. Are you okay with us recording, or would you prefer we continue without recording?"</blockquote>
+<h4>If the Customer Declines Recording</h4>
+<p>Respect the answer immediately. Do not persuade, challenge, or ask the customer to justify the decision.</p>
+<blockquote>"No problem at all &mdash; I'll keep it unrecorded and take notes manually."</blockquote>
+<p>Then continue the conversation normally and document the relevant customer context in Salesforce afterward.</p>
+<div class="callout"><div><strong>Recording is never more important than the conversation.</strong> If recording is not permitted, the customer declines, or Gong prevents recording for that location, continue using the approved unrecorded process and capture your notes manually.</div></div>
+<h4>Why Does Call Recording Matter?</h4>
+<p>Call recording is not only a documentation requirement. When available, it is one of the most useful tools SDRs have for improving execution, strengthening AE partnership, and developing their selling skills.</p>
+<table>
+<tr><th>Benefit</th><th>Why It Matters</th></tr>
+<tr><td>Stronger AE handoffs</td><td>The AE can hear the customer's actual language, pain points, objections, priorities, and commitments instead of relying only on a summary.</td></tr>
+<tr><td>Less repetition for the customer</td><td>AEs can prepare from the recorded conversation and continue discovery rather than asking the customer to repeat information they already shared with Trimble.</td></tr>
+<tr><td>Better documentation</td><td>Recordings and transcripts make it easier to capture accurate notes, next steps, stakeholder context, and buying signals.</td></tr>
+<tr><td>More useful coaching</td><td>Managers and SDRs can review specific moments from real conversations to improve discovery, messaging, objection handling, and call execution.</td></tr>
+<tr><td>Faster skill development</td><td>Reps can review their own calls and learn from strong examples across the team instead of relying only on role plays or memory.</td></tr>
+</table>
+<p>Think of recorded calls as <strong>game tape</strong>: a source of customer intelligence and a way to see exactly what is working, where conversations are breaking down, and what to improve next.</p>
+<h4>After Every Meaningful Call</h4>
+<p>Whether the call was recorded or unrecorded:</p>
+<ul><li>Confirm the activity is associated with the correct Salesforce record.</li><li>Capture meaningful customer context, not just that a call occurred.</li><li>Document agreed next steps and follow-up commitments.</li><li>Update relevant qualification or opportunity information.</li><li>Share the Gong recording or appropriate context with the AE when it will help them prepare for the next conversation.</li></ul>
+<div class="callout"><div><strong>The standard:</strong> Use the approved Gong-connected workflow. Follow the recording requirements for the region you are calling. Respect the customer's choice. Capture the customer story accurately enough that the next person from Trimble can continue the conversation without starting over.</div></div>
     </section>
 
     <div class="part-divider"><span class="part-roman">PART V</span><h2 class="part-title">Productivity &amp; Execution</h2></div>
